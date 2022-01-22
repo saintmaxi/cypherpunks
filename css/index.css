@@ -1,0 +1,188 @@
+@font-face {  
+	font-family: '8bit';
+	src: URL('../css/8bit.otf') format('truetype');
+}  
+
+* {
+    font-family: '8bit';
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+}
+
+.blinking {
+    animation: blinker 1.6s linear infinite;
+}
+
+
+.one {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.0s;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.0s;
+  }
+  
+  .two {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.2s;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.2s;
+  }
+  
+  .three {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.3s;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.3s;
+  }
+  
+  @-webkit-keyframes dot {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  
+  @keyframes dot {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+
+#cypherpunks-for-sale {
+    width: 90vw;
+    margin: auto;
+}
+
+#available-punks {
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* min-height: 40vh; */
+}
+
+.punk-for-sale {
+    width: 17%;
+    font-size: 1.3vw;
+}
+
+.punk-for-sale img {
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+}
+
+.punk-for-sale img:hover {
+    cursor: pointer;
+}
+
+/* .your-yeti img {
+    border: 3px solid white;
+} */
+
+.punk-id {
+    text-align: center;
+    color: black;
+    text-shadow: none;
+    font-style: normal;
+    font-size: 2vw;
+    padding-top: 5px;
+}
+
+.eth-symbol {
+    font-family: 'Arial';
+    font-weight: bolder;
+    font-size: 1.9vw;
+    margin-left: 2px;
+}
+
+@media screen and (max-width: 991px) {
+    p {
+        padding: 20px;
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 36px;
+        line-height: 36px;
+        text-align: center;
+    }
+
+    .body-heading {
+        text-align: center;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    #cypherpunks-for-sale {
+        width: 98vw;
+        margin: auto;
+    }
+    
+    .punk-for-sale {
+        width: 49%;
+        font-size: 4vh;
+    }
+    
+    .punk-for-sale img {
+        margin-bottom: 1vh;
+        margin-top: 1vh;
+    }
+    
+    .punk-for-sale img:hover {
+        cursor: pointer;
+    }
+    
+    .punk-id {
+        text-align: center;
+        color: black;
+        text-shadow: none;
+        font-style: normal;
+        font-size: 4vh;
+        padding-top: 5px;
+    }
+    
+    .eth-symbol {
+        font-family: 'Arial';
+        font-weight: bolder;
+        font-size: 3.9vh;
+        margin-left: 2px;
+    }
+
+}
