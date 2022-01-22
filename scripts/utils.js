@@ -19,7 +19,7 @@ const loadExamples = async() => {
     for (let i = 1; i < 101; i++) {
         let punkId = i;
         headshotDisplayed.set(punkId, false);
-        batchFakeJSX += `<div id="punk-${punkId}" class="punk-for-sale"><img id="punk-img-${punkId}" src="../images/punk-images/${punkId}.png" onclick="displayHeadshot(${punkId})"><p class="punk-id">#${punkId} ${punkId}<span class="eth-symbol">Ξ</span></p></div>`
+        batchFakeJSX += `<div id="punk-${punkId}" class="punk-for-sale"><img id="punk-img-${punkId}" src="./images/punk-images/${punkId}.png" onclick="displayHeadshot(${punkId})"><p class="punk-id">#${punkId} ${punkId}<span class="eth-symbol">Ξ</span></p></div>`
     };
     $("#available-punks").append(batchFakeJSX);
 }
@@ -27,11 +27,11 @@ const loadExamples = async() => {
 const displayHeadshot = async(id) => {
     if (headshotDisplayed.get(id)) {
         headshotDisplayed.set(id, false);
-        $(`#punk-img-${id}`).attr("src", `../images/punk-images/${id}.png`);
+        $(`#punk-img-${id}`).attr("src", `./images/punk-images/${id}.png`);
     }
     else {
         headshotDisplayed.set(id, true);
-        $(`#punk-img-${id}`).attr("src", `../images/punk-images/headshot.png`);
+        $(`#punk-img-${id}`).attr("src", `./images/punk-images/headshot.png`);
     }
 }
 
